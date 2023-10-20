@@ -1,341 +1,78 @@
-return (function(...)
-	return (function(...)
-		return (function(...)
-			return (function(...)
-				return (function(...)
-					return (function(...)
-						return (function(...)
-							return (function(...)
-								return (function(...)
-									return (function(...)
-										return (function(...)
-											return (function(...)
-												return (function(...)
-													return (function(...)
-														return (function(...)
-															local a, B;
-															do
-																local z = math.floor;
-																local Y = math.random;
-																local i = table.remove;
-																local m = string.char;
-																local j = 0;
-																local U = 2;
-																local e = {};
-																local N = {};
-																local d = 0;
-																local S = {};
-																for z = 1, 256, 1 do
-																	S[z] = z;
-																end;
-																repeat
-																	local z = Y(1, #S);
-																	local j = i(S, z);
-																	N[j] = m(j - 1);
-																until #S == 0;
-																local n = {};
-																local function J()
-																	if #n == 0 then
-																		j = (j * 101 + 25112671242405) % 35184372088832;
-																		repeat
-																			U = (U * 166) % 257;
-																		until U ~= 1;
-																		local Y = U % 32;
-																		local i = (z(j / 2 ^ (13 - (U - Y) / 32)) % 4294967296) / 2 ^ Y;
-																		local m = z((i % 1) * 4294967296) + z(i);
-																		local e = m % 65536;
-																		local N = (m - e) / 65536;
-																		local d = e % 256;
-																		local S = (e - d) / 256;
-																		local J = N % 256;
-																		local y = (N - J) / 256;
-																		n = {
-																				d,
-																				S,
-																				J,
-																				y,
-																			};
-																	end;
-																	return table.remove(n);
-																end;
-																local y = {};
-																B = setmetatable({}, { __index = y, __metatable = nil });
-																function a(z, Y)
-																	local i = y;
-																	if i[Y] then
- 
-																	else
-																		n = {};
-																		local m = N;
-																		j = Y % 35184372088832;
-																		U = Y % 255 + 2;
-																		local e = string.len(z);
-																		i[Y] = "";
-																		local d = 92;
-																		for j = 1, e, 1 do
-																			d = ((string.byte(z, j) + J()) + d) % 256;
-																			i[Y] = i[Y] .. m[d + 1];
-																		end;
-																	end;
-																	return Y;
-																end;
-															end;
-															local y = {
-																	B[a("\208\133|\241Nb\0148", 10131584648420)],
-																	B[a("\230\145\238\023\143\021\204\203\208\239\n\133", 5550409779503)],
-																	B[a("i\173-\014\165\214\019\156\130@\183\182", 16884027064470)],
-																	999,
-																	B[a("\014\246\178\178\028W\198\240$|\229p\200B\132\222", 24468662435427)],
-																	B[a("\226\196@,\177\024\030c\195\031i|\166W5\163\135\an]\168g\226\243\167\012\146\204+C\187\198", 30866849632088)],
-																	B[a("\028\231\138\150\203Q\186}\132\132\027M)_\239\027\190Nt\217\255\130\149\v", 8932242864619)],
-																	B[a("\018\192\127\139", 10412369297792)],
-																	B[a("\187\205\170\195\239\170gSUk\023D", 16404192755629)],
-																	B[a("%\128\004.\162\131\220;\028p\175\234", 22501669653614)],
-																	B[a("ad\1493t\b\2141\132\2356\2544\132\183\133\173\183\003n", 25973434327039)],
-																	B[a("[\185\207x\211\015\153d\143\178I\027", 10337135147863)],
-																	B[a("<Iq\179t\218A\031,\235l\158XwwZ", 26854695504496)],
-																	B[a("\138{\251/\017>\234`&h\146\159", 26918964524805)],
-																	B[a("\129i\129tN\001\224\247t\223lQx\202\192z", 28917210758559)],
-																	true,
-																	B[a("\181\020\232\132", 24838576581583)],
-																	B[a("\232\244\245\026XEI\196\026\222j\184", 34378658435087)],
-																	B[a("\026\207\177rW\1430\209V/QM", 19207636980437)],
-																	B[a("\167\234\229\131N\156)\161\191\228\141>M\b\231FN\208\1963\1778\167\144\183\132\149\242", 29357554555859)],
-																	B[a("\214\218\186\014\239\232G\004", 9437244517303)],
-																	B[a("E\194u\220\002tY\148", 21842823528357)],
-																	B[a("\157#\234E\200\169\141\157\153\237J^\012\017Sp\196\159\137{", 29107755591775)],
-																	false,
-																	B[a("Y\0275;,\239XQ\146&4\150\000O\158\2191o\227\249\178D\160\246\189\159<\1649Gj\219\176C\249\003", 8867214680706)],
-																	B[a(",YP6\003\206v\143\018}hK", 18178962192692)],
-																	B[a("\2098\179\181\137U\026\220", 8412624365182)],
-																	100,
-																	B[a("\151\002XM\175l}4>N\208o\187\251\b\023", 9118745389554)],
-																	B[a("K\027S\127\159\191\207\163C\243\180\214", 9322900031343)],
-																	B[a("k\223\233h\144l?\028\132D\223\155 \141\139\193f\228\2467\162\025x2", 12452627367845)],
-																	B[a("~\023<y\135\228vi", 19657443498870)],
-																	B[a("\228w-W4b\238\169\169\247\209\158\235\001\214\239", 4392172845228)],
-																	B[a("\215@\192+ZX\162\239\001%\0222\206h\219\001\147\015!c+\v\158\164", 7889876227947)],
-																};
-															local function V(z)
-																return y[z + 0];
-															end;
-															for z, Y in ipairs({ { 1, 34 }, { 1, 23 }, { 24, 34 } }) do
-																while Y[1] < Y[2] do
-																	y[Y[1]], y[Y[2]], Y[1], Y[2] = y[Y[2]], y[Y[1]], Y[1] + 1, Y[2] - 1;
-																end;
-															end;
-															do
-																local z = {
-																		[B[a("\225", 16756084203089)]] = 54,
-																		[B[a("\201", 25642301219081)]] = 39,
-																		[B[a("@", 3273638355953)]] = 43,
-																		[B[a("\147", 13385077776394)]] = 28,
-																		[B[a("X", 7346553330459)]] = 20,
-																		[B[a("\240", 10996108176680)]] = 30,
-																		[B[a("\239", 30900037111828)]] = 27,
-																		[B[a("\127", 17527935359924)]] = 62,
-																		[B[a("\249", 7536273232168)]] = 36,
-																		[B[a("}", 22060528423843)]] = 46,
-																		[B[a("\177", 20055589274480)]] = 33,
-																		[B[a("\212", 26179817895184)]] = 13,
-																		[B[a("6", 19898896205057)]] = 59,
-																		[B[a("\189", 3474929620636)]] = 23,
-																		[B[a("\201", 24352437203765)]] = 7,
-																		[B[a("\204", 14654979965229)]] = 3,
-																		[B[a("\236", 21172746037241)]] = 29,
-																		[B[a("\169", 31053068158498)]] = 37,
-																		[B[a("\233", 25962846471667)]] = 61,
-																		[B[a("\151", 12546310689214)]] = 50,
-																		[B[a("\a", 3003997142138)]] = 11,
-																		[B[a("\202", 1879400551054)]] = 12,
-																		[B[a("$", 3061841419351)]] = 15,
-																		[B[a("P", 1430029269940)]] = 10,
-																		[B[a("\149", 12502180652364)]] = 55,
-																		[B[a("\153", 2146315175033)]] = 9,
-																		[B[a("\213", 24959959279808)]] = 32,
-																		[B[a("4", 17292828531955)]] = 63,
-																		[B[a("\194", 25849507512786)]] = 57,
-																		[B[a("\222", 21188222627914)]] = 6,
-																		[B[a("\223", 32501415826803)]] = 48,
-																		[B[a("l", 28106856243485)]] = 44,
-																		[B[a("\210", 29689617483224)]] = 24,
-																		[B[a("t", 8713363329861)]] = 53,
-																		[B[a("\177", 3048696889928)]] = 42,
-																		[B[a("\213", 33901320991579)]] = 25,
-																		[B[a("\203", 19317354944584)]] = 35,
-																		[B[a("\018", 18915235922439)]] = 41,
-																		[B[a("\252", 1966733522481)]] = 0,
-																		[B[a("\252", 11747185984879)]] = 45,
-																		[B[a("\141", 14063114282432)]] = 58,
-																		[B[a("\193", 1267825883646)]] = 2,
-																		[B[a("\006", 11433671624259)]] = 47,
-																		[B[a("\231", 28771138169770)]] = 51,
-																		[B[a("\237", 18018666408792)]] = 26,
-																		[B[a("\148", 32235564330232)]] = 16,
-																		[B[a("\238", 12734222622338)]] = 21,
-																		[B[a("i", 11278493029864)]] = 1,
-																		[B[a("\225", 18225899014164)]] = 52,
-																		[B[a("\004", 6156921946759)]] = 31,
-																		[B[a("\138", 4605403363663)]] = 14,
-																		[B[a("v", 18600535217324)]] = 49,
-																		[B[a("\139", 23895779015962)]] = 22,
-																		[B[a("\213", 21311537388382)]] = 5,
-																		[B[a("\188", 30529684035716)]] = 40,
-																		[B[a("\171", 33067830005386)]] = 38,
-																		[B[a("*", 24080254339033)]] = 8,
-																		[B[a("\170", 5715288088007)]] = 60,
-																		[B[a("\179", 1026853615557)]] = 17,
-																		[B[a("\026", 32437973008556)]] = 34,
-																		[B[a(".", 22476669990860)]] = 18,
-																		[B[a(",", 16589393406837)]] = 4,
-																		[B[a("\239", 24685450253115)]] = 56,
-																		[B[a("M", 2002101127903)]] = 19,
-																	};
-																local Y = table[B[a("p\162\130\248\158\175", 6919872329766)]];
-																local i = type;
-																local m = string[B[a("\241\175\145", 19595054531150)]];
-																local j = math[B[a("\017\'\229\219X", 11555288565787)]];
-																local U = y;
-																local e = string[B[a("\192|\201D", 33632863399923)]];
-																local N = table[B[a("\154\210@\197V\191", 33770277281385)]];
-																local d = string[B[a("\005\r\155", 9066360090848)]];
-																for S = 1, #U, 1 do
-																	local n = U[S];
-																	if i(n) == B[a("d0\230\177\151\030", 10743312970563)] then
-																		local i = m(n);
-																		local J = {};
-																		local y = 1;
-																		local V = 0;
-																		local T = 0;
-																		while y <= i do
-																			local Y = d(n, y, y);
-																			local m = z[Y];
-																			if m then
-																				V = V + m * 64 ^ (3 - T);
-																				T = T + 1;
-																				if T == 4 then
-																					T = 0;
-																					local z = j(V / 65536);
-																					local Y = j((V % 65536) / 256);
-																					local i = V % 256;
-																					N(J, e(z, Y, i));
-																					V = 0;
-																				end;
-																			elseif Y == B[a("\155", 26175291795438)] then
-																				N(J, e(j(V / 65536)));
-																				if y >= i or d(n, y + 1, y + 1) ~= B[a("X", 4028512452551)] then
-																					N(J, e(j((V % 65536) / 256)));
-																				end;
-																				break;
-																			end;
-																			y = y + 1;
-																		end;
-																		U[S] = Y(J);
-																	end;
-																end;
-															end;
-															local T = { [B[a("JQ", 32548002358087)]] = function(z, Y, i, m, j)
-																		return V(i - 1);
-																	end, [B[a("/", 31477505932381)]] = function(z, Y, i, m, j)
-																		return V(j + 0);
-																	end };
-															(getgenv())[T[B[a("h", 8858592343619)]](-847, -643, 877, 620, 4)] = (getgenv())[T[B[a("\251\006", 33758921464711)]](-159, 206, 5, 277, 621)] / T[B[a("\255", 26723246786125)]](896, 633, 880, 440, 17);
-															local z = game[T[B[a("\179", 29271313327554)]](-851, 385, -126, 1013, 32)][T[B[a("\184", 21498498394569)]](537, -586, 928, 22, 28)];
-															local Y = z:WaitForChild(T[B[a("\154", 2053552313437)]](-917, 151, -98, -583, 8));
-															local i = game:GetService(T[B[a("\163\247", 30934056060126)]](-73, 102, 10, -579, -841));
-															local m = game:GetService(T[B[a("\207", 32207714816858)]](-336, -269, 67, 98, 22));
-															local j = game:GetService(T[B[a("\202", 33694457284811)]](224, -727, -335, -510, 23));
-															local U = nil;
-															local e = nil;
-															local N = T[B[a("\028B", 23127708370115)]](-470, 290, 14, 984, 572);
-															repeat
-																wait();
-															until game:IsLoaded() and z[T[B[a("\165", 17951045281184)]](541, -540, -442, 330, 3)] ~= nil;
-															local d = T[B[a("\141", 25163559185387)]](339, 914, -872, -860, 13);
-															local S = {};
-															local function n(z)
-																local m = { [B[a("\255", 20580720464088)]] = function(z, Y, i, m, j)
-																			return V(j + 0);
-																		end, [B[a("W", 30288306765108)]] = function(z, Y, i, m, j)
-																			return V(m + 0);
-																		end };
-																local Y = z[m[B[a("B", 3966132150246)]](-797, -834, 866, 7, -803)];
-																local i = S[z];
-																if Y ~= i then
-																	S[z] = Y;
-																	if (z:GetFullName()):find(m[B[a("\228", 25036868540711)]](-197, -537, -157, 30, -250)) and z[m[B[a("\024", 21736241112190)]](-768, -195, 619, -898, 7)] == m[B[a("\157", 27974019446134)]](279, 708, 900, 5, -975) then
-																		for z, Y in pairs(z:GetDescendants()) do
-																			if Y[m[B[a("-", 7156281242353)]](-539, 836, -499, 11, 779)] ~= m[B[a("~", 9898729073804)]](-48, 452, 530, 19, -600) then
-																				U = Y[m[B[a(":", 3907781656833)]](-127, 438, -844, 26, 314)]:connect(function()
-																						local z = { [B[a("D", 7308555087801)]] = function(z, Y, i, m, j)
-																									return V(j - 1);
-																								end, [B[a("o\188", 34993969438695)]] = function(z, Y, i, m, j)
-																									return V(m - 1);
-																								end };
-																						if Y[z[B[a("\251\127", 34574942650970)]](39, -559, -802, 22, -720)][z[B[a("(", 31587918355560)]](-1012, 780, -984, -773, 7)][z[B[a("!", 13761575264782)]](314, 602, -122, 346, 25)] >= (getfenv())[z[B[a("|\178", 17494097902910)]](-334, 888, 848, 5, 590)] and d == z[B[a("\015\018", 17882079038177)]](-425, -928, -40, 14, 978) then
-																							d = z[B[a("\177\146", 11169113878041)]](243, 63, 219, 6, 405);
-																						end;
-																					end);
-																			end;
-																		end;
-																	elseif (z:GetFullName()):find(m[B[a("\219", 33913389569856)]](724, -946, 429, -198, 30)) and z[m[B[a("\146", 7776864656317)]](-284, -61, 734, 7, -335)] == m[B[a("\127", 10099193777773)]](119, -102, 735, 13, 1006) then
-																		d = m[B[a("\015", 6507290137141)]](-911, 926, -380, -485, 13);
-																		if U then
-																			U:Disconnect();
-																		end;
-																	end;
-																end;
-															end;
-															for z, Y in pairs(Y:GetDescendants()) do
-																if Y:IsA(T[B[a("\025", 4738566118984)]](-640, -50, 632, 350, 33)) then
-																	S[Y] = Y[T[B[a("e", 22688944474702)]](192, 603, 312, 731, 7)];
-																	Y[T[B[a("\a", 15454605033258)]](-272, 721, -973, -240, 26)]:Connect(function()
-																		local z = { [B[a("N", 5487321400)]] = function(z, Y, i, m, j)
-																					return V(j + 0);
-																				end, [B[a("\167h", 14009799478844)]] = function(z, Y, i, m, j)
-																					return V(i - 1);
-																				end };
-																		n(Y);
-																	end);
-																end;
-															end;
-															local function J(z)
-																local Y = { [B[a("\135", 30250553965254)]] = function(z, Y, i, m, j)
-																			return V(i + 0);
-																		end, [B[a("\016", 2916421117249)]] = function(z, Y, i, m, j)
-																			return V(j + 1);
-																		end };
-																if z[Y[B[a("\161", 4268270206542)]](944, -600, -835, 976, 0)] == (getgenv())[Y[B[a("\017", 26131385209279)]](-907, -986, -572, 789, 11)] then
-																	i:SendKeyEvent(Y[B[a("\190", 13545183007342)]](12, -301, 926, -235, 4), keytoclick, Y[B[a("\t", 6144686791303)]](58, 840, 107, 379, 12), game);
-																end;
-															end;
-															j[T[B[a("(", 7180246642187)]](-712, 993, 600, 1036, 18)]:Connect(J);
-															m[T[B[a("\191", 23115088202199)]](-902, -200, 313, -924, 34)]:Connect(function()
-																local z = { [B[a(":", 28495210605682)]] = function(z, Y, i, m, j)
-																			return V(m + 1);
-																		end, [B[a("\183\215", 28297624047280)]] = function(z, Y, i, m, j)
-																			return V(j - 1);
-																		end };
-																if d == z[B[a("\205/", 20933567754525)]](653, -822, -851, 287, 6) then
-																	i:SendKeyEvent(z[B[a("OX", 15484431153797)]](54, -642, -772, -100, 14), keytoclick, z[B[a("\186", 24127064586665)]](1027, 213, 47, 12, -379), game);
-																end;
-															end);
-															if (getgenv())[T[B[a("=\238", 3227049535407)]](-117, -262, 26, -749, -705)] == T[B[a("\240", 15656827701542)]](-100, -249, -975, 950, 5) then
-																setfpscap(T[B[a("\251\246", 146475171210)]](672, 900, 28, -721, -749));
-															end;
-															game[T[B[a("[", 16153238400456)]](-804, -643, 1016, 101, 2)]:SetCore(T[B[a("\197D", 24393946410113)]](1034, -184, 21, -597, -275), { [T[B[a("\246", 6235299109522)]](44, -354, -43, -523, 10)] = T[B[a("\1788", 8041483135947)]](-569, 369, 30, -377, -22), [T[B[a("/e", 15083916330303)]](-760, -934, 17, 771, -200)] = T[B[a("_", 3527341356886)]](-105, -284, 903, 973, 14), [T[B[a("$\156", 2945972749053)]](-202, 777, 16, -175, -314)] = T[B[a("\b\142", 6000257392365)]](-441, -772, 32, -381, -825) });
-														end)(...);
-													end)(...);
-												end)(...);
-											end)(...);
-										end)(...);
-									end)(...);
-								end)(...);
-							end)(...);
-						end)(...);
-					end)(...);
-				end)(...);
-			end)(...);
-		end)(...);
-	end)(...);
-end)(...);
+
+-- script
+getgenv().greenNumber = getgenv().greenNumber/100
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local vim = game:GetService("VirtualInputManager")
+local RunService = game:GetService("RunService")
+local userInputService = game:GetService("UserInputService")
+local shootConnection = nil
+local loopConnection = nil
+local isShootGui = false
+
+repeat
+    wait()
+until game:IsLoaded() and player.Character ~= nil
+
+local CanGreen = false
+
+local initialVisibilityStates = {}
+
+local function checkVisibilityChanges(guiObject)
+    local currentVisibility = guiObject.Visible
+    local previousVisibility = initialVisibilityStates[guiObject]
+
+    if currentVisibility ~= previousVisibility then
+        initialVisibilityStates[guiObject] = currentVisibility
+        if guiObject:GetFullName():find(".Visual.Shooting") and guiObject.Visible == true then
+            for i, v in pairs(guiObject:GetDescendants()) do
+                if v.Name ~= "Overlay" then
+                    shootConnection = v.Changed:connect(function()                    	
+                    	if v.Size.Y.Scale >= getfenv().greenNumber and CanGreen == false then
+                            CanGreen = true
+                    	end
+                    end)
+                end
+            end
+        elseif guiObject:GetFullName():find(".Visual.Shooting") and guiObject.Visible == false then
+        	CanGreen = false
+            if shootConnection then
+                shootConnection:Disconnect()
+            end
+        end
+    end
+end
+
+for _, guiObject in pairs(playerGui:GetDescendants()) do
+    if guiObject:IsA("GuiObject") then
+        initialVisibilityStates[guiObject] = guiObject.Visible
+        guiObject.Changed:Connect(
+            function()
+                checkVisibilityChanges(guiObject)
+            end
+        )
+    end
+end
+
+local function onKeyPress(input)
+	if input.KeyCode == getgenv().customautogreen then
+		vim:SendKeyEvent(true, keytoclick, false, game)
+	end
+end
+userInputService.InputBegan:Connect(onKeyPress)
+
+RunService.RenderStepped:Connect(function()
+	if CanGreen == true then
+		vim:SendKeyEvent(false, keytoclick, false, game)
+	end
+end)
+
+if getgenv().unlockfps == true then
+	setfpscap(999)
+end
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "xkid's legit auto-green";
+    Text = "100% legit";
+    Duration = "5";
+})
