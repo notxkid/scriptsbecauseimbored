@@ -1,73 +1,331 @@
-
--- script
-getgenv().greenNumber = getgenv().greenNumber/100
-local player = game.Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
-local vim = game:GetService("VirtualInputManager")
-local RunService = game:GetService("RunService")
-local userInputService = game:GetService("UserInputService")
-local shootConnection = nil
-local loopConnection = nil
-local isShootGui = false
-
-repeat
-    wait()
-until game:IsLoaded() and player.Character ~= nil
-
-local CanGreen = false
-
-local initialVisibilityStates = {}
-
-local function checkVisibilityChanges(guiObject)
-    local currentVisibility = guiObject.Visible
-    local previousVisibility = initialVisibilityStates[guiObject]
-
-    if currentVisibility ~= previousVisibility then
-        initialVisibilityStates[guiObject] = currentVisibility
-        if guiObject:GetFullName():find(".Visual.Shooting") and guiObject.Visible == true then
-            for i, v in pairs(guiObject:GetDescendants()) do
-                if v.Name ~= "Overlay" then
-                    shootConnection = v.Changed:connect(function()                    	
-                    	if v.Size.Y.Scale >= getfenv().greenNumber and CanGreen == false then
-			    vim:SendKeyEvent(false, keytoclick, false, game)
-                            CanGreen = true
-                    	end
-                    end)
-                end
-            end
-        elseif guiObject:GetFullName():find(".Visual.Shooting") and guiObject.Visible == false then
-        	CanGreen = false
-            if shootConnection then
-                shootConnection:Disconnect()
-            end
-        end
-    end
-end
-
-for _, guiObject in pairs(playerGui:GetDescendants()) do
-    if guiObject:IsA("GuiObject") then
-        initialVisibilityStates[guiObject] = guiObject.Visible
-        guiObject.Changed:Connect(
-            function()
-                checkVisibilityChanges(guiObject)
-            end
-        )
-    end
-end
-
-local function onKeyPress(input)
-	if input.KeyCode == getgenv().customautogreen then
-		vim:SendKeyEvent(true, keytoclick, false, game)
-	end
-end
-userInputService.InputBegan:Connect(onKeyPress)
-
-if getgenv().unlockfps == true then
-	setfpscap(999)
-end
-
-game.StarterGui:SetCore("SendNotification", {
-    Title = "xkid's legit auto-green";
-    Text = "100% legit, cant be banned";
-    Duration = "5";
-})
+return (function(...)
+	return (function(...)
+		return (function(...)
+			return (function(...)
+				return (function(...)
+					return (function(...)
+						return (function(...)
+							return (function(...)
+								return (function(...)
+									return (function(...)
+										return (function(...)
+											return (function(...)
+												return (function(...)
+													return (function(...)
+														return (function(...)
+															local x, W;
+															do
+																local X = math.floor;
+																local b = math.random;
+																local I = table.remove;
+																local S = string.char;
+																local s = 0;
+																local y = 2;
+																local J = {};
+																local e = {};
+																local B = 0;
+																local l = {};
+																for X = 1, 256, 1 do
+																	l[X] = X;
+																end;
+																repeat
+																	local X = b(1, #l);
+																	local s = I(l, X);
+																	e[s] = S(s - 1);
+																until #l == 0;
+																local w = {};
+																local function H()
+																	if #w == 0 then
+																		s = (s * 97 + 30482050311989) % 35184372088832;
+																		repeat
+																			y = (y * 155) % 257;
+																		until y ~= 1;
+																		local b = y % 32;
+																		local I = (X(s / 2 ^ (13 - (y - b) / 32)) % 4294967296) / 2 ^ b;
+																		local S = X((I % 1) * 4294967296) + X(I);
+																		local J = S % 65536;
+																		local e = (S - J) / 65536;
+																		local B = J % 256;
+																		local l = (J - B) / 256;
+																		local H = e % 256;
+																		local q = (e - H) / 256;
+																		w = {
+																				B,
+																				l,
+																				H,
+																				q,
+																			};
+																	end;
+																	return table.remove(w);
+																end;
+																local q = {};
+																x = setmetatable({}, { __index = q, __metatable = nil });
+																function W(X, b)
+																	local I = q;
+																	if I[b] then
+ 
+																	else
+																		w = {};
+																		local S = e;
+																		s = b % 35184372088832;
+																		y = b % 255 + 2;
+																		local J = string.len(X);
+																		I[b] = "";
+																		local B = 252;
+																		for s = 1, J, 1 do
+																			B = ((string.byte(X, s) + H()) + B) % 256;
+																			I[b] = I[b] .. S[B + 1];
+																		end;
+																	end;
+																	return b;
+																end;
+															end;
+															local q = {
+																	x[W("\146\170\176\238\250\154w\214", 32956652285871)],
+																	x[W("g%\228/\026\004y\176\223\2134\247JF\026\179\219M\189]", 25251480278370)],
+																	true,
+																	x[W("\155\151\199\148\173\190\234z\232j\203\135", 23446184550793)],
+																	x[W("t\253*\232xk\004\2521\138\n\148", 813703240724)],
+																	x[W(",`\238\029<\"[e\133\r\210\169\214\211\213\152", 18430881791157)],
+																	x[W("\194)]T\147\200U\220\242<QIm$\213\165\172\2358\144w#S\230", 5497869998242)],
+																	x[W("[\002\232\197\184W\151\000\152\144\239\223\239Q\006\176\135\001c\211\185\213\141\149\133\128O:I\000\024\198\027\136\224\255", 9204525315727)],
+																	x[W("\188\1447\004\214\177\156\246", 28437462064492)],
+																	x[W("\020C\196\132*{\005\180\166\211\175\169", 9900426386702)],
+																	x[W("Gth\148\190c\200Y/q\200\210\018\191p\215\235Ra\205r\t\174S", 32119020472057)],
+																	false,
+																	x[W("\191K*\240{\029\156z", 3529248232474)],
+																	999,
+																	x[W("\161\147b\000\1303`\255", 908299368093)],
+																	x[W("\206\130XS\255\240\156\138d\209\202\154", 9343773835728)],
+																	x[W("\"O\218I\140\234\180F\247B\172\160\167A\028\a4\184\194\17970\159\245", 28444871701362)],
+																	x[W("\234\170\170\182", 14739683710501)],
+																	x[W("\231\243~\190\128%p\185nB>\\", 19885741121254)],
+																	x[W("G\200\171\142", 7381104146514)],
+																	x[W("\185\199\223\199w-\227M\159\000}\224", 28065095130093)],
+																	x[W("\138\128\140w\181vH\016X\252\v\188\168\031\216\163", 28149471142634)],
+																	100,
+																	x[W("qN\203B\249a\170\248\240\227\177\174\026#\249\021", 11583067499036)],
+																	x[W("\171H\222%z\164\185\160\022\1417\031", 4478438815859)],
+																	x[W("\146\t\158\031\164\182\028\203\1912Q\206", 14421874759466)],
+																	x[W("E\151\171E\187\t\026Thv\024r\235\200\131OEu\138\173\217\217\153\165\235\179\243\226t+\129&", 25398129368187)],
+																	x[W("\020\243\018\001\163\177\165\207\002>\208M", 24543802454521)],
+																	x[W("N\151\024\'\250\r\216\171I\027B\254E\1902v", 31607112561493)],
+																	x[W("\r\240\183\018\149kV\236,b\2085\186^)u\134\019\023fQ\216U\"|\200\b\190", 14074428948696)],
+																	x[W("\012c;{!?p\171\224\156\023 \199\227W\239", 1347769737259)],
+																	x[W("9\144S\137q\244\131\154\134_\215\226", 23329877605222)],
+																	x[W("\211\211\201\248<M\220\255", 34380067352392)],
+																};
+															for X, b in ipairs({ { 1, 33 }, { 1, 2 }, { 3, 33 } }) do
+																while b[1] < b[2] do
+																	q[b[1]], q[b[2]], b[1], b[2] = q[b[2]], q[b[1]], b[1] + 1, b[2] - 1;
+																end;
+															end;
+															local function G(X)
+																return q[X - 1];
+															end;
+															do
+																local X = math[x[W("E\173,\190\222", 13679968893206)]];
+																local b = string[x[W("\003G\135", 16215016320825)]];
+																local I = q;
+																local S = string[x[W("\005\252\205\006", 8157465941375)]];
+																local s = table[x[W("\193O]B|T", 15718858005044)]];
+																local y = string[x[W("\027\021\158", 32032397977198)]];
+																local J = {
+																		[x[W("\207", 7102641864753)]] = 6,
+																		[x[W("\162", 28007264566046)]] = 31,
+																		[x[W("\207", 11108801615817)]] = 41,
+																		[x[W("\220", 10917752132194)]] = 62,
+																		[x[W("\128", 13873164460823)]] = 45,
+																		[x[W("K", 25429842411259)]] = 37,
+																		[x[W("\127", 11129338302152)]] = 5,
+																		[x[W("-", 19255834982614)]] = 50,
+																		[x[W("\208", 4267700949481)]] = 51,
+																		[x[W("\021", 22731180183023)]] = 22,
+																		[x[W("\225", 24954444669819)]] = 20,
+																		[x[W("V", 32019262716009)]] = 12,
+																		[x[W("\141", 9212363191824)]] = 44,
+																		[x[W("\160", 1824138377006)]] = 3,
+																		[x[W("\223", 13087972625579)]] = 49,
+																		[x[W("\002", 29471930910287)]] = 21,
+																		[x[W("\158", 24142112133516)]] = 61,
+																		[x[W("l", 20226748767953)]] = 19,
+																		[x[W("o", 32157444098175)]] = 48,
+																		[x[W("\157", 31908310646957)]] = 43,
+																		[x[W("\216", 21562187191821)]] = 26,
+																		[x[W("\163", 23920180647338)]] = 16,
+																		[x[W("^", 27585819886495)]] = 14,
+																		[x[W("D", 25327541663160)]] = 60,
+																		[x[W("\144", 30311138322171)]] = 15,
+																		[x[W("\003", 34427175967271)]] = 11,
+																		[x[W("\019", 7406782665262)]] = 40,
+																		[x[W("\"", 22044158128941)]] = 8,
+																		[x[W("\002", 16965031708641)]] = 34,
+																		[x[W("\029", 14985784853440)]] = 53,
+																		[x[W("\220", 4288142075706)]] = 30,
+																		[x[W("\131", 31732962928971)]] = 13,
+																		[x[W("\244", 31537334528696)]] = 58,
+																		[x[W("\142", 23897918398046)]] = 29,
+																		[x[W("<", 6668072704748)]] = 23,
+																		[x[W("A", 15319913156111)]] = 52,
+																		[x[W("\022", 6985356346509)]] = 33,
+																		[x[W("\022", 2387413626950)]] = 27,
+																		[x[W("\179", 15399365981966)]] = 56,
+																		[x[W("G", 29428415867892)]] = 1,
+																		[x[W("3", 16025996880873)]] = 9,
+																		[x[W("}", 7816119619879)]] = 55,
+																		[x[W("\021", 21785863545345)]] = 4,
+																		[x[W("\169", 7305551852834)]] = 10,
+																		[x[W("%", 7048556978746)]] = 63,
+																		[x[W("\214", 13611264376370)]] = 47,
+																		[x[W("\026", 1293578510195)]] = 46,
+																		[x[W("\144", 17775075167152)]] = 35,
+																		[x[W("\164", 7348423374691)]] = 57,
+																		[x[W(".", 24790132666434)]] = 24,
+																		[x[W("\196", 33868037150370)]] = 7,
+																		[x[W("\199", 23429321297016)]] = 54,
+																		[x[W("\187", 18482718052246)]] = 0,
+																		[x[W("X", 25626661449534)]] = 28,
+																		[x[W("\138", 32942160617772)]] = 36,
+																		[x[W("m", 14291979274264)]] = 39,
+																		[x[W("\217", 32614581534356)]] = 18,
+																		[x[W("\195", 18855562950491)]] = 42,
+																		[x[W("^", 17510553949697)]] = 59,
+																		[x[W("\255", 27766300990270)]] = 2,
+																		[x[W("6", 5154584879150)]] = 38,
+																		[x[W("\172", 32305840986539)]] = 32,
+																		[x[W("G", 10905117703728)]] = 25,
+																		[x[W("\023", 21422751276713)]] = 17,
+																	};
+																local e = table[x[W("\241\162\223Q\031\162", 7533901380123)]];
+																local B = type;
+																for l = 1, #I, 1 do
+																	local w = I[l];
+																	if B(w) == x[W("\019\252f<\205;", 5130599248331)] then
+																		local B = y(w);
+																		local H = {};
+																		local q = 1;
+																		local G = 0;
+																		local Z = 0;
+																		while q <= B do
+																			local I = b(w, q, q);
+																			local s = J[I];
+																			if s then
+																				G = G + s * 64 ^ (3 - Z);
+																				Z = Z + 1;
+																				if Z == 4 then
+																					Z = 0;
+																					local b = X(G / 65536);
+																					local I = X((G % 65536) / 256);
+																					local s = G % 256;
+																					e(H, S(b, I, s));
+																					G = 0;
+																				end;
+																			elseif I == x[W("\022", 10359828643771)] then
+																				e(H, S(X(G / 65536)));
+																				if q >= B or b(w, q + 1, q + 1) ~= x[W("\230", 33181435523888)] then
+																					e(H, S(X((G % 65536) / 256)));
+																				end;
+																				break;
+																			end;
+																			q = q + 1;
+																		end;
+																		I[l] = s(H);
+																	end;
+																end;
+															end;
+															local Z = { [x[W("\129\144", 9038279154676)]] = function(X, b, I, S, s)
+																		return G(X - 1);
+																	end, [x[W("\253", 10050364460453)]] = function(X, b, I, S, s)
+																		return G(X + 1);
+																	end };
+															(getgenv())[Z[x[W("r", 14729809349579)]](8, 279, -518, -178, 984)] = (getgenv())[Z[x[W("\213", 12111209443597)]](8, 1003, 822, 477, -525)] / Z[x[W("\018\222", 1561173356547)]](27, 290, 668, -878, -424);
+															local X = game[Z[x[W("\176", 7324684741083)]](23, -583, 258, 203, 673)][Z[x[W("\161", 12505023481116)]](26, 839, 684, -968, 185)];
+															local b = X:WaitForChild(Z[x[W("%", 6545727526622)]](21, -661, 915, -252, -914));
+															local I = game:GetService(Z[x[W("?", 30062789191819)]](32, 279, 452, 120, 119));
+															local S = game:GetService(Z[x[W("\235", 4147913972397)]](33, 195, -725, -693, 179));
+															local s = game:GetService(Z[x[W("\017\030", 11626416516072)]](11, 367, 285, 87, 641));
+															local y = nil;
+															local J = nil;
+															local e = Z[x[W("\177\214", 20972911818556)]](16, -840, 135, -183, -608);
+															repeat
+																wait();
+															until game:IsLoaded() and X[Z[x[W("\207", 29487153569968)]](6, 153, -143, 721, 243)] ~= nil;
+															local B = Z[x[W("\227\186", 30337160285329)]](16, 65, 737, -334, -207);
+															local l = {};
+															local function w(X)
+																local s = { [x[W("4", 28472091086640)]] = function(X, b, I, S, s)
+																			return G(S - 1);
+																		end, [x[W("/\186", 25485431529632)]] = function(X, b, I, S, s)
+																			return G(I + 1);
+																		end };
+																local b = X[s[x[W("\004", 13155030998886)]](408, 867, 267, 30, -49)];
+																local S = l[X];
+																if b ~= S then
+																	l[X] = b;
+																	if (X:GetFullName()):find(s[x[W("\220X", 23720783379822)]](-407, 509, 13, 204, 366)) and X[s[x[W("\184", 6779898659617)]](883, 994, -942, 30, -209)] == s[x[W("\192n", 27398383935126)]](-906, 998, 5, 329, 879) then
+																		for X, b in pairs(X:GetDescendants()) do
+																			if b[s[x[W("\236~", 18321389444051)]](614, 537, 11, 1028, -243)] ~= s[x[W("^\206", 29340080470744)]](391, -814, 7, 241, -628) then
+																				y = b[s[x[W("-\181", 8369336081409)]](324, -259, 18, 797, 543)]:connect(function()
+																						local X = { [x[W("\179\220", 505917209173)]] = function(X, b, I, S, s)
+																									return G(s - 1);
+																								end, [x[W("\163\220", 33453612639825)]] = function(X, b, I, S, s)
+																									return G(I + 1);
+																								end };
+																						if b[X[x[W("W\022", 24080539636168)]](975, 45, 818, 328, 19)][X[x[W("\023\184", 8623548825867)]](407, -859, 20, 317, 817)][X[x[W("\2362", 12238265028802)]](200, -527, 3, -960, -237)] >= (getfenv())[X[x[W("I\186", 30408246873491)]](132, -352, 694, -293, 10)] and B == X[x[W("\245\228", 19808428671142)]](729, -533, 318, -1008, 16) then
+																							I:SendKeyEvent(X[x[W("\240\152", 34899216669508)]](-130, -421, -591, -201, 16), keytoclick, X[x[W("<8", 5934433316772)]](-148, -500, 34, -742, 16), game);
+																							B = X[x[W("<}", 7085009788364)]](-791, 65, 298, -216, 7);
+																						end;
+																					end);
+																			end;
+																		end;
+																	elseif (X:GetFullName()):find(s[x[W("\026n", 1938854088522)]](-746, 314, 13, 355, -515)) and X[s[x[W("a", 34419059956046)]](761, 427, 660, 30, 536)] == s[x[W("\156\140", 28404116593458)]](304, -258, 14, -640, -8) then
+																		B = s[x[W("n\163", 28477323194642)]](-530, -28, 14, 241, 795);
+																		if y then
+																			y:Disconnect();
+																		end;
+																	end;
+																end;
+															end;
+															for X, b in pairs(b:GetDescendants()) do
+																if b:IsA(Z[x[W("WC", 27899924093787)]](14, 36, -8, -930, 708)) then
+																	l[b] = b[Z[x[W("K", 22397630535853)]](28, 56, -854, 897, 880)];
+																	b[Z[x[W("\027", 24138533907038)]](18, -820, 957, -260, 860)]:Connect(function()
+																		local X = { [x[W("\211", 30857162984687)]] = function(X, b, I, S, s)
+																					return G(s - 1);
+																				end, [x[W("\005", 5008262370376)]] = function(X, b, I, S, s)
+																					return G(I - 1);
+																				end };
+																		w(b);
+																	end);
+																end;
+															end;
+															local function H(X)
+																local b = { [x[W("\159\227", 26057362866204)]] = function(X, b, I, S, s)
+																			return G(s + 1);
+																		end, [x[W("\187", 29421719269973)]] = function(X, b, I, S, s)
+																			return G(X - 1);
+																		end };
+																if X[b[x[W("\208*", 26074322709895)]](757, 605, 959, 637, 27)] == (getgenv())[b[x[W("~U", 2753304624595)]](337, 408, -339, -793, 4)] then
+																	I:SendKeyEvent(b[x[W("\168\217", 8507573026654)]](328, -67, 173, 779, 5), keytoclick, b[x[W("\198\174", 18469768456278)]](706, -407, 989, 924, 14), game);
+																end;
+															end;
+															s[Z[x[W("\184", 20214020574114)]](24, -39, -542, 504, -336)]:Connect(H);
+															if (getgenv())[Z[x[W("\149\196", 20164703889056)]](32, -613, 793, -284, -261)] == Z[x[W("\217j", 23751209045822)]](7, -789, 542, 74, 762) then
+																setfpscap(Z[x[W("V", 28956163132821)]](16, 988, -345, 591, 551));
+															end;
+															game[Z[x[W("\140", 32929550618298)]](31, 545, 74, -386, 215)]:SetCore(Z[x[W(",H", 9299622596644)]](21, -525, 659, 957, 647), { [Z[x[W("2", 13417559559622)]](15, 232, 511, 977, -86)] = Z[x[W("\224", 28272931990580)]](29, 88, 601, 837, 447), [Z[x[W("lU", 24676306488673)]](4, -70, 261, 1018, 629)] = Z[x[W("\177\197", 30041136819082)]](12, 872, 448, -737, -466), [Z[x[W("\169", 29318336194686)]](1, 643, 374, 471, -521)] = Z[x[W("G\221", 9399937516071)]](24, 174, -689, 178, -17) });
+														end)(...);
+													end)(...);
+												end)(...);
+											end)(...);
+										end)(...);
+									end)(...);
+								end)(...);
+							end)(...);
+						end)(...);
+					end)(...);
+				end)(...);
+			end)(...);
+		end)(...);
+	end)(...);
+end)(...);
