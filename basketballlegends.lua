@@ -29,6 +29,7 @@ local function checkVisibilityChanges(guiObject)
                 if v.Name ~= "Overlay" then
                     shootConnection = v.Changed:connect(function()                    	
                     	if v.Size.Y.Scale >= getfenv().greenNumber and CanGreen == false then
+			    vim:SendKeyEvent(false, keytoclick, false, game)
                             CanGreen = true
                     	end
                     end)
@@ -61,18 +62,12 @@ local function onKeyPress(input)
 end
 userInputService.InputBegan:Connect(onKeyPress)
 
-RunService.RenderStepped:Connect(function()
-	if CanGreen == true then
-		vim:SendKeyEvent(false, keytoclick, false, game)
-	end
-end)
-
 if getgenv().unlockfps == true then
 	setfpscap(999)
 end
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "xkid's legit auto-green";
-    Text = "100% legit";
+    Text = "100% legit, cant be banned";
     Duration = "5";
 })
